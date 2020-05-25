@@ -18,6 +18,6 @@ export default class App extends Vue {}
 
 <style lang="scss" scoped>
 #app {
-  font-family: 'Avenir-Light';
+  font-family: 'Century Gothic', 'Avenir-Light';
 }
 </style>
