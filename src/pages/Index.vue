@@ -8,9 +8,11 @@
           <span>@tocomi</span>
         </div>
         <div class="picture column white">
-          <img class="picture__image" src="../assets/images/fatman.jpg" />
+          <img class="image" src="../assets/images/portrait/fatman.jpg" />
         </div>
       </div>
+
+      <artifacts />
 
       <div class="sns row">
         <div class="text column white">
@@ -20,17 +22,6 @@
           <span>Kenta TSUNEMI</span>
         </div>
       </div>
-
-      <div class="artifacts">
-        <div class="artifact row">
-          <div class="text column white">
-            <span>Kenta TSUNEMI</span>
-          </div>
-          <div class="link column black">
-            <span>Kenta TSUNEMI</span>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </template>
@@ -38,8 +29,13 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import ScrollReveal from 'scrollreveal';
+import Artifacts from '../components/Artifacts.vue';
 
-@Component({})
+@Component({
+  components: {
+    Artifacts,
+  },
+})
 export default class Index extends Vue {
   // lifecycle
   created() {
@@ -51,6 +47,8 @@ export default class Index extends Vue {
 </script>
 
 <style lang="scss" scoped>
+@import '../assets/styles/global.scss';
+
 .index-wrapper {
   display: flex;
   justify-content: center;
@@ -58,41 +56,19 @@ export default class Index extends Vue {
 
 .index {
   background-color: #f8f8f8;
-  border: solid 5px black;
-  max-width: 512px;
-  width: 512px;
-}
-
-.row {
-  display: flex;
-  height: 47vw;
-  margin-top: 192px;
-  max-height: 256px;
-}
-
-.column {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 47vw;
-}
-
-.black {
-  background-color: black;
-  color: white;
-}
-
-.white {
-  background-color: white;
+  border: solid 5px $grey;
+  max-width: $max-width;
 }
 
 .name-picture {
-  .picture {
-    &__image {
-      height: 100%;
-      width: 100%;
-    }
-  }
+  margin-top: $section-margin;
+}
+
+.artifacts {
+  margin-top: $section-margin;
+}
+
+.sns {
+  margin-top: $section-margin;
 }
 </style>
