@@ -3,9 +3,9 @@
     <div class="index">
       <div class="name-picture row">
         <div class="name column black">
-          <span>Kenta</span>
-          <span>TSUNEMI</span>
-          <span>@tocomi</span>
+          <span class="name__first">Kenta</span>
+          <span class="name__last">TSUNEMI</span>
+          <span class="name__handle">@tocomi</span>
         </div>
         <div class="picture column white">
           <img class="image" src="../assets/images/portrait/fatman.jpg" />
@@ -62,6 +62,21 @@ export default class Index extends Vue {
 
 .name-picture {
   margin-top: $section-margin;
+
+  .name {
+    align-items: flex-start;
+    font-size: 4.8vw;
+
+    &__first,
+    &__last {
+      margin-left: 4vw;
+    }
+
+    &__handle {
+      font-size: 4vw;
+      margin: 8px 0 0 25vw;
+    }
+  }
 }
 
 .artifacts {

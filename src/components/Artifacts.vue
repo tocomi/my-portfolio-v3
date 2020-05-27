@@ -24,16 +24,16 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  height: 64px;
+  height: 18vw;
   justify-content: center;
 
   &__title {
-    font-size: 18px;
+    font-size: 4.4vw;
     font-weight: bold;
   }
 
   &__description {
-    font-size: 14px;
+    font-size: 3.6vw;
   }
 }
 </style>
